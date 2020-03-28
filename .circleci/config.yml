@@ -29,7 +29,7 @@ jobs: # A basic unit of work in a run
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-      - lint:
+      - run:
           name: run lint
           command: |
             python3 -m venv venv
