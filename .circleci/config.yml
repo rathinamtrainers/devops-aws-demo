@@ -21,7 +21,7 @@ jobs: # A basic unit of work in a run
           name: install dependencies
           command: |
             python3 -m venv venv
-            . env/bin/activate
+            . venv/bin/activate
             make install
 
       - save_cache: # cache Python dependencies using checksum of Pipfile as the cache-key
@@ -33,12 +33,12 @@ jobs: # A basic unit of work in a run
           name: run lint
           command: |
             python3 -m venv venv
-            . env/bin/activate
+            . venv/bin/activate
             make lint
 
       - run:
           name: run tests
           command: |
             python3 -m venv venv
-            . env/bin/activate
+            . venv/bin/activate
             make test
